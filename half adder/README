@@ -1,0 +1,75 @@
+# Half Adder using Verilog HDL
+
+## Overview
+
+This project implements a Half Adder using Verilog HDL.
+
+A Half Adder performs the addition of two single-bit binary numbers.
+
+### Boolean Equations
+
+Sum = A XOR B
+
+Carry = A AND B
+
+---
+
+## Truth Table
+
+| A | B | Sum | Carry |
+|---|---|-----|-------|
+|0|0|0|0|
+|0|1|1|0|
+|1|0|1|0|
+|1|1|0|1|
+
+---
+
+## Files
+
+- half_adder.v
+- half_adder_tb.v
+- simulation_output.png
+- README.md
+
+---
+
+## Simulation
+
+Compile:
+
+```
+iverilog -o half_adder half_adder.v half_adder_tb.v
+```
+
+Run:
+
+```
+vvp half_adder
+```
+
+Generate waveform:
+
+```
+iverilog -o half_adder half_adder.v half_adder_tb.v
+vvp half_adder
+gtkwave dump.vcd
+```
+
+---
+
+## Output
+
+```
+A B | Sum Carry
+0 0 | 0 0
+0 1 | 1 0
+1 0 | 1 0
+1 1 | 0 1
+```
+
+---
+
+## Author
+
+Your Name
